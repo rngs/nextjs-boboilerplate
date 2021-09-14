@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  web:
+    image: node:16.9.0-stretch
+    ports:
+        - "3000:3000"
+    tty: true
+    working_dir: /docker/src
+    volumes: 
+        - ./:/docker
