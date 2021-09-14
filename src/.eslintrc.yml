@@ -13,4 +13,10 @@ parserOptions:
 plugins:
   - react
   - '@typescript-eslint'
-rules: {}
+rules: {
+  semi: ['error', 'always'],
+  semi-style: ['error', 'last'],
+  no-extra-semi: 'error',
+  no-use-before-define: 'off',
+  indent: ['error', 4],
+}
