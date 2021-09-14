@@ -14,9 +14,40 @@ plugins:
   - react
   - '@typescript-eslint'
 rules: {
-  semi: ['error', 'always'],
-  semi-style: ['error', 'last'],
-  no-extra-semi: 'error',
-  no-use-before-define: 'off',
-  indent: ['error', 4],
+  block-scoped-var: 'error', # 変数のスコープ厳格化
+  curly: 'error', # ブロックの中括弧省略不可
+  indent: ['error', 4], # インデントの空白数: スペース4
+  jsx-quotes: ['error', 'prefer-single'], # JSXを文字リテラルをシングルクォート限定
+  key-spacing: ['error', { afterColon: true,  }], # オブジェクトリテラルのコロン後の空白必須
+  keyword-spacing: ['error', { 'before': true, 'after': true }], # キーワード前後に空白必須
+  max-classes-per-file: ['error', 1], # 1ファイル内の最大クラス数: 1
+  max-depth: ['error', 4], # ブロックの最大ネスト数: 4
+  max-len: ['error', { code: 200, ignoreComments: true, ignoreUrls: true }], # 1行の最大長: 200文字 ※コメント,URLは無視
+  max-lines: ['error', 1000], # ファイル内の最大行数: 1000行
+  max-lines-per-function: ['error', 80], # 関数内の最大行数: 80行
+  max-nested-callbacks: ['error', 3], # コールバックの最大ネスト数: 3
+  no-console: 'error', # console利用不可
+  no-debugger: 'error', # debugger不可
+  no-empty: 'error', # 空ブロック不可
+  no-eq-null: 'error', # nullの厳格比較必須
+  no-extra-semi: 'error', # 不要なセミコロンの不可
+  no-new: 'error', # 保持しない new の不可
+  no-use-before-define: 'off',  # 宣言前の利用許可
+  no-var: 'error', # varの使用不可
+  require-await: 'error', # await式のない非同期関数を不可
+  require-jsdoc: ['error', {
+      require: {
+          FunctionDeclaration: true,
+          MethodDefinition: true,
+          ClassDeclaration: true,
+          ArrowFunctionExpression: true,
+          FunctionExpression: true
+      }
+  }], # doc必須
+  semi: ['error', 'always'], # 最後にセミコロン必須
+  semi-spacing: 'error', # セミコロン前の空白不可
+  semi-style: ['error', 'last'], # セミコロンは最後に付ける
+  space-unary-ops: ['error', {'words': true, 'nonwords': false}], # 演算子周りの空白 単語:不可 / 演算子:可
+  spaced-comment: ['error', 'always'], # コメントの最初に空白必須
+  template-curly-spacing: ['error', 'never'], # テンプレートリテラル内のスペース不可
 }
