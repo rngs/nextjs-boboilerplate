@@ -1,5 +1,11 @@
 extends:
-  - next
+  - next/core-web-vitals
+parser: '@typescript-eslint/parser'
+parserOptions:
+  ecmaFeatures:
+    jsx: true
+  ecmaVersion: 12
+  sourceType: module
 rules:
   block-scoped-var: error # 変数のスコープ厳格化
   curly: error # ブロックの中括弧省略不可
