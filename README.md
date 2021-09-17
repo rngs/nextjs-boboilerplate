@@ -23,3 +23,9 @@ $ docker-compose exec web yarn install
 ```sh
 $ docker-compose exec web yarn dev
 ```
+
+# 静的コード解析実行
+
+```sh
+$ docker-compose exec web yarn lint
+```
