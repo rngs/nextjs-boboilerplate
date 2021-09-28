@@ -2,11 +2,10 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "main": "app.ts",
   "scripts": {
-    "dev": "next dev",
+    "dev": "node src/server.ts",
     "build": "next build",
-    "start": "node src/app.ts",
+    "start": "NODE_ENV=production node src/server.ts",
     "lint": "next lint"
   },
   "dependencies": {
